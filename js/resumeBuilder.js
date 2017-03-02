@@ -96,13 +96,13 @@ var projects = {
         {
             "title":"Advanced Software Engineer",
             "dates":"2016.5-now",
-            "description":"",
+            "description":"Develop interactive live products that share resources across schools",
             "images":[]
         },
         {
             "title":".NET Engineer",
             "dates":"2015.3-2016.5",
-            "description":"",
+            "description":"Develop a tool to help analyze virus using big data",
             "images":[]
         },
 
