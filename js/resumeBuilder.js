@@ -15,7 +15,11 @@ var bio = {
     "welcomeMessage":"Let's communicate and be friends!",
     "skills":["programming","fluent English", "basketball"],
     "biopic":"images/wuxu.jpg",
-    "display":function(){}//to be done
+};
+
+bio.display = function()
+{
+
 };
 
 var education = {
@@ -91,7 +95,7 @@ var work =
 }
 
 var projects = {
-    "projects":
+    "projectArr":
     [   
         {
             "title":"Advanced Software Engineer",
@@ -121,3 +125,34 @@ var projects = {
         }
     ]
 }
+
+
+// var HTMLprojectStart = '<div class="project-entry"></div>';
+// var HTMLprojectTitle = '<a href="#">%data%</a>';
+// var HTMLprojectDates = '<div class="date-text">%data%</div>';
+// var HTMLprojectDescription = '<p><br>%data%</p>';
+// var HTMLprojectImage = '<img src="%data%">';
+
+
+projects.display = function()
+{
+    this.projectArr.forEach(function(project)
+    {
+        $("#projects").append(HTMLprojectStart);
+
+        var formattedTitle = HTMLprojectTitle.replace("%data%",project.title);
+        var formattedDates = HTMLprojectDates.replace("%data%",project.dates);
+        var formattedDescription = HTMLprojectDescription.replace("%data%",project.description);
+
+        $(".project-entry:last").append(formattedTitle);
+        $(".project-entry:last").append(formattedDates);
+        $(".project-entry:last").append(formattedDescription);
+
+        project.images.forEach(function(image)
+        {
+            var formattedPic = HTMLprojectImage.replace("%data%",image);
+            $(".project-entry:last").append(formattedPic);
+        });
+        
+    });
+};
