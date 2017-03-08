@@ -101,27 +101,27 @@ var projects = {
             "title":"Advanced Software Engineer",
             "dates":"2016.5-now",
             "description":"Develop interactive live products that share resources across schools",
-            "images":["images/st1.jpg","images/st2.jpg","images/st3.jpg"]
+            "images":["images/st1.jpg","images/st2.jpg","images/st3.jpg","images/st4.jpg"]
         },
         {
             "title":".NET Engineer",
             "dates":"2015.3-2016.5",
             "description":"Develop a tool to help analyze virus using big data",
-            "images":[]
+            "images":["images/bigdata1.jpg","images/bigdata2.jpg","images/bigdata3.jpg","images/bigdata4.jpg"]
         },
 
         {
             "title":".NET Engineer",
             "dates":"2014.2-2015.2",
             "description":"A voice recognition client that recognizes spkears' voice and translates into different languages. It can also display all kinds of documents, like ppt and word, etc.",
-            "images":[]
+            "images":["images/voice1.jpg","images/voice2.jpg","images/voice3.jpg","images/voice4.jpg"]
         },
 
         {
             "title":"Group Leader",
             "dates":"2013.2-2014.2",
             "description":"A product that manages people, production, repertory and finance. It realizes paperless work and shares information across different departments ",
-            "images":["images/guoli1.jpg","images/guoli2.jpg","images/guoli3.jpg","images/guoli4.jpg","images/guoli5.jpg"]
+            "images":["images/guoli1.jpg","images/guoli2.jpg","images/guoli3.jpg","images/guoli4.jpg"]
         }
     ]
 }
@@ -153,8 +153,10 @@ projects.display = function()
             var formattedPic = HTMLprojectImage.replace("%data%",image);
             $(".project-entry:last").append(formattedPic);
         });
-        
     });
+
+    $("img").css("width",300);
+    $("img").css("height",150);
 };
 
 projects.display();
