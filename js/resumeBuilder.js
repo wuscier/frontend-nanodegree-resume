@@ -8,8 +8,9 @@ var bio = {
     "contacts":{
         "mobile":"13552351806",
         "email":"1352288123@qq.com",
-        "github":"wuscier",
-        "twitter":"",
+        "github":"http://www.github.com/wuscier",
+        "twitter":"13552351806",
+        "blog":"http://www.cnblogs.com/wuscier",
         "location":"Beijing, China"      
     },
     "welcomeMessage":"Let's communicate and be friends!",
@@ -19,8 +20,25 @@ var bio = {
 
 bio.display = function()
 {
+    var formattedName = HTMLheaderName.replace("%data%",bio.name);
+    var formattedRole = HTMLheaderRole.replace("%data%",bio.role);
+
 
 };
+
+var HTMLheaderName = '<h1 id="name">%data%</h1>';
+var HTMLheaderRole = '<span>%data%</span><hr>';
+
+var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="white-text">%data%</span></li>';
+var HTMLmobile = '<li class="flex-item"><span class="orange-text">mobile</span><span class="white-text">%data%</span></li>';
+var HTMLemail = '<li class="flex-item"><span class="orange-text">email</span><span class="white-text">%data%</span></li>';
+var HTMLtwitter = '<li class="flex-item"><span class="orange-text">twitter</span><span class="white-text">%data%</span></li>';
+var HTMLgithub = '<li class="flex-item"><span class="orange-text">github</span><span class="white-text">%data%</span></li>';
+var HTMLblog = '<li class="flex-item"><span class="orange-text">blog</span><span class="white-text">%data%</span></li>';
+var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</span><span class="white-text">%data%</span></li>';
+
+var HTMLbioPic = '<img src="%data%" class="biopic">';
+var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
 
 var education = {
     "schools":[
@@ -125,14 +143,6 @@ var projects = {
         }
     ]
 }
-
-
-// var HTMLprojectStart = '<div class="project-entry"></div>';
-// var HTMLprojectTitle = '<a href="#">%data%</a>';
-// var HTMLprojectDates = '<div class="date-text">%data%</div>';
-// var HTMLprojectDescription = '<p><br>%data%</p>';
-// var HTMLprojectImage = '<img src="%data%">';
-
 
 projects.display = function()
 {
