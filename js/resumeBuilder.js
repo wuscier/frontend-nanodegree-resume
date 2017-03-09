@@ -15,7 +15,7 @@ var bio = {
         "location": "Beijing, China"
     },
     "welcomeMessage": "Let's communicate and be friends!",
-    "skills": ["programming", "fluent English", "basketball"],
+    "skills": ["programming", "fluent English", "basketball","cooking"],
     "biopic": "images/wuxu.jpg",
 };
 
@@ -34,9 +34,6 @@ bio.display = function () {
     var formattedPic = HTMLbioPic.replace("%data%", bio.biopic);
     var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 
-
-    $("#header").prepend(formattedWelcomeMsg);
-    $("#header").prepend(formattedPic);
     $("#header").prepend(formattedRole);
     $("#header").prepend(formattedName);
 
@@ -48,14 +45,25 @@ bio.display = function () {
     $("#topContacts").append(formattedBlog);
     $("#topContacts").append(formattedLocation);
 
+    $("#footerContacts").append(formattedWechat);
+    $("#footerContacts").append(formattedMobile);
+    $("#footerContacts").append(formattedEmail);
+    $("#footerContacts").append(formattedTwitter);
+    $("#footerContacts").append(formattedGithub);
+    $("#footerContacts").append(formattedBlog);
+    $("#footerContacts").append(formattedLocation);
+
+    $("#header").append(formattedPic);
+    $("#header").append(formattedWelcomeMsg);
+
     $("#header").append(HTMLskillsStart);
     bio.skills.forEach(function (skill) {
         var formattedSkill = HTMLskills.replace("%data%", skill);
         $("#skills").append(formattedSkill);
     });
 
-    $("#header img").css("width", 160);
-    $("#header img").css("height", 160);
+    $("#header img").css("width", 150);
+    $("#header img").css("height", 150);
 };
 
 var education = {
